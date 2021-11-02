@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Reporting System- Report A Crime</title>
+    <!--		<link rel="stylesheet" href="style.css">		-->
+	<style>
+		*{
+			margin: 0px;
+			padding:0px;
+			box-sizing: border-box;
+			font-family: sans-serif;
+			
+		}
+		/* NAVIGATION BAR */
+		nav{
+			width: 100%;
+			height: 75px;
+			background-color: black;
+			line-height: 75px;
+			padding:0px 100px;
+			position: fixed;
+			z-index : 1;
+		}
+		nav .logo{
+			font-weight: bold;
+			letter-spacing: 1.5px;
+		}
+		nav .logo p{
+			font-size: 30px;
+			float: left;
+			color: white;
+			text-transform: uppercase;
+		}
+		nav ul{
+			float:right;
+		}
+		nav ul li{
+			display: inline-block;
+			list-style: none;
+		}
+		nav ul li a{
+			color: white;
+			text-decoration: none;
+			font-size: 18px;
+			text-transform: uppercase;
+			padding: 0px 32px;
+		}
+		nav ul li a:hover{
+			color:#cccccc;
+		}
+		
+		.image{
+			width: 100%;
+			position: absolute;
+			z-index: -1;
+			opacity:0.7;
+		}
+		.heading{
+			color: blue;
+			background-color: white;
+			font-weight: 600;
+			font-size: 1.5em;
+			margin-bottom: 20px;
+			border-bottom: 4px solid black;
+			display: inline-block;
+			letter-spacing: 1px;
+			
+		}
+		
+		/* CONTAINER */
+		.container{
+			max-width: 80%;
+			/*background-color: rgb(198, 152, 241);*/
+			padding: 34px;
+			margin: auto;
+		}
+		.container h1, p{
+			text-align: center;
+		}
+		p{
+			font-size: 17px;
+		}
+
+		input, textarea{
+			border: 2px solid black;
+			border-radius: 6px;
+			outline: none;
+			width: 80%;
+			margin: 11px 0px;
+			padding: 7px;
+			font-size: 16px;
+		}
+
+		form{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+		}
+		.btn{
+			color:white;
+			background:purple;
+			padding: 10px;
+			font-size: 16px;
+			border: 2px solid white;
+			border-radius: 14px;
+			cursor: pointer;
+		}
+		.submitmsg{
+			font-size: 25px;
+			color: rgb(25, 102, 25);
+		}
+		
+		
+		
+		/* FOOTER */
+		.footer{
+			background-color: black;
+			color: white;
+			height: 400px;
+			bottom: 50px;
+			left: 0;
+			position: sticky;
+			
+		}
+		
+		.footer .footer-content{
+			
+			height: 350px;
+		}
+		.footer .footer-bottom{
+			background-color: rgb(153,51,153);
+			color: rgb(255,255,153);
+			height: 50px;
+			text-align: center;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			padding-top: 20px;
+			width: 100%;
+		}
+		
+	
+	</style>
+
+</head>
+<body>
+	<img src="image/img1.jpg" class="image" alt="background image"> 
+	<nav>
+		<div class="logo">
+			<p> Crime Reporting System </p>
+		</div>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="about.html">Contact the Developers</a></li>
+			<li><a href="adminlogin.html">ADMINISTRATOR LOGIN</a></li>
+		</ul>
+	</nav>
+	<br><br><br><br>
+	
+	<div class="page-wrapper">
+	
+		
+		<div class="container">
+			<span class="heading"> <h1>Report A Crime </h1> </span>
+    
+			<br>
+
+			<form action="index.php" method="POST">
+			
+				<input type="text" name="name" id="name" placeholder="Enter Your Name" required>
+				<input type="email" name="email" id="email" placeholder="Enter Your Email ID" required>
+				<input type="text" name="age" id="age" placeholder="Enter Your Age" required>
+				<input type="text" name="gender" id="gender" placeholder="Enter Your Gender (M/F)" required>
+				<input type="phone" name="phone" id="phone" placeholder="Enter Your Phone Number (max. 10 characters)" required>
+				<input type="aadhaar" name="aadhaar" id="aadhaar" placeholder="Enter Your AADHAAR Enrollment Number (max. 16 characters)" required>
+				<input type="place" name="place" id="place" placeholder="Enter the Location of the Crime" required>
+				<textarea name="desc" id="desc" cols="30" rows="10" placeholder="Enter the details of the crime, i.e., how did the attack take place, the details of the victims, any information about the criminals, and the details of the eyewitnesses, if present at the location. " required></textarea>
+				<button class="btn">Submit </button>
+				<!-- <button class="btn">Reset </button>  -->
+			</form>
+		
+		</div>
+		
+
+	
+		<!--FOOTER 
+		<div class="footer">
+			<div class="footer-content">
+				<div class="footer-content about"> 
+				
+				</div>
+				<div class="footer-content developers"> 
+				
+				</div>
+				<div class="footer-content contact-form"> 
+				
+				</div>
+			</div>
+			<div class="footer-bottom">
+				&copy; reportacrime.com | Designed by Divya Joshi
+			</div>
+		</div> -->
+		
+	</div>
+</body>
+</head>

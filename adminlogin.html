@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Reporting System- Administrator Login</title>
+    <!--		<link rel="stylesheet" href="style.css">		-->
+	<style>
+		
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Poppins', sans-serif;
+	}
+	/* NAVIGATION BAR */
+		nav{
+			width: 100%;
+			height: 75px;
+			background-color: black;
+			line-height: 75px;
+			padding:0px 100px;
+			position: fixed;
+			z-index : 1;
+		}
+		nav .logo{
+			font-weight: bold;
+			letter-spacing: 1.5px;
+		}
+		nav .logo p{
+			font-size: 30px;
+			float: left;
+			color: white;
+			text-transform: uppercase;
+		}
+		nav ul{
+			float:right;
+		}
+		nav ul li{
+			display: inline-block;
+			list-style: none;
+		}
+		nav ul li a{
+			color: white;
+			text-decoration: none;
+			font-size: 18px;
+			text-transform: uppercase;
+			padding: 0px 32px;
+		}
+		nav ul li a:hover{
+			color:#cccccc;
+		}
+	
+	/* SECTION- LOGIN FORM */
+	section{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		display: flex;
+	}
+	section .imgBx{
+		position: relative;
+		width: 50%;
+		height: 750px;
+	}
+	section .imgBx:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 750px;
+		z-index: 1;
+	}
+	section .imgBx img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 750px;
+		object-fit: cover;
+	}
+	
+	section .contentBx{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50%;
+		heigth: 100%;
+	}
+	section .contentBx .formBx{
+		width: 50%;
+	}
+	section .contentBx .formBx h2{
+		color: white;
+		background-color: black;
+		font-weight: 600;
+		font-size: 1.5em;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		border-bottom: 4px solid green;
+		display: inline-block;
+		letter-spacing: 1px;
+	}
+	section .contentBx .formBx .inputBx{
+		margin-bottom: 20px;
+	}
+	section .contentBx .formBx .inputBx span{
+		font-size: 16px;
+		margin-bottom: 5px;
+		display: inline-block;
+		color: black;
+		font-weight: 300;
+		letter-spacing: 1px;
+	}
+	section .contentBx .formBx .inputBx input{
+		width: 100%;
+		padding: 10px 20px;
+		outline: none;
+		font-weight: 400;
+		border: 1px solid green;
+		font-size: 16px;
+		letter-spacing: 1px;
+		color: black;
+		background: transparent;
+		border-radius: 30px;
+	}
+	section .contentBx .formBx .inputBx input[type="submit"]{
+		background: green;
+		color: #fff;
+		outline: none;
+		border: none;
+		font-weight: 500;
+		cursor: pointer;
+	}
+	section .contentBx .formBx .inputBx input[type="submit"]:hover{
+		background: #33ff33;
+	}
+	
+	@media (max-width: 768px){
+		section .imgBx {
+			position: absolute;
+			width:100%;
+			height:100%;
+			top:0;
+			left: 0;
+		}
+		section .contentBx{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			heigth: 100%;
+			z-index: 1;
+		}
+		section .contentBx .formBx{
+			width: 100%;
+			padding: 40px;
+			background: rgb(255 255 255 / 0.9);
+			margin: 50px;
+		}
+	}
+	
+	
+	</style>
+
+</head>
+<body>
+	<!-- <img src="image/admin.jpeg" class="image" alt="background image"> -->
+	<nav>
+		<div class="logo">
+			<p> Crime Reporting System </p>
+		</div>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="about.html">Contact the Developers</a></li>
+			<li><a href="adminlogin.html">ADMINISTRATOR LOGIN</a></li>
+		</ul>
+	</nav>
+	<br><br><br><br>
+	
+	
+	<section>
+		<div class="imgBx">
+			<img src="image/admin.jpeg">
+		</div>
+		
+		<div class="contentBx">
+			<div class="formBx">
+				<h2>Administrator Login</h2>
+				<form action="login.php" method="POST">
+					<div class="inputBx">
+						<span>Username</span>
+						<input type="text" name="username" required>
+					</div>
+					<div class="inputBx">
+						<span>Password</span>
+						<input type="password" name="password" required>
+					</div>
+					<div class="inputBx">
+						<input type="submit" value="Login/ Sign In" >
+					</div>
+					
+				</form>
+			</div>
+		</div>
+		
+	</section>
+		
+	
+</body>
+</head>
