@@ -1,5 +1,4 @@
 # CrimeReportingSystem
-This is the repository that our team will use while developing our minor project , i.e. , Online Crime Reporting System Using Python.
 
 # Procedure to Run this project on your system:
 1. Download XAMPP and start Apache and MySQL server by going in XAMPP Control Panel.
